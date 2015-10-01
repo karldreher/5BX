@@ -11,13 +11,20 @@ h3{
 
 .number{
 
-  font-size: large; 
+  font-size: x-large; 
 
 }
 
 
 
-.select{
-  font-size: large;
+.select{	
+  width: 40%;
+  font-size: x-large; 
+  border-radius: 10px;
+  height: 60px;
+
 }
 
+.ui-accordion-header{
+	font-size: xx-large;
+}
