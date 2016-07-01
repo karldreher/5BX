@@ -4,14 +4,12 @@
     
   }
 
-h3{
-  font-size: x-large;
-  
-}
+
 
 .number{
 
-  font-size: x-large; 
+  font-size: 350%;
+  height: 15%;
 
 }
 
@@ -19,12 +17,25 @@ h3{
 
 .select{	
   width: 40%;
-  font-size: x-large; 
+  font-size: 330%; 
   border-radius: 10px;
-  height: 60px;
+  height: 80px;
 
 }
 
 .ui-accordion-header{
-	font-size: xx-large;
+	font-size: 330%;
+
 }
+
+.ui-accordion-header-active{
+
+	font-weight: bold;
+	background: lightgreen; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(lightgreen, lightyellow); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(lightgreen, lightyellow); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(lightgreen, lightyellow); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(lightgreen, lightyellow); /* Standard syntax */
+
+}
+
