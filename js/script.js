@@ -62,6 +62,7 @@ ladder.forEach(function(indexnum){
 });
 
 objSelect.appendChild(fragment);
+$('select').select2();
 
 function maindisplay(){
   var rung=objSelect.value;
