@@ -52,17 +52,6 @@ var ladder = [
 
 var objSelect = document.getElementById("select");
 
-var fragment = document.createDocumentFragment();
-
-ladder.forEach(function(indexnum){
-    var opt = document.createElement('option');
-    opt.innerHTML = indexnum[0];
-    opt.value = indexnum[0];
-    fragment.appendChild(opt);
-});
-
-objSelect.appendChild(fragment);
-
 function maindisplay(){
   var rung=objSelect.value;
   var bend = document.getElementById("bend");
@@ -71,8 +60,8 @@ function maindisplay(){
   var pushup = document.getElementById("pushup");
   var RunandJump = document.getElementById("RunandJump");
       
-  if (objSelect.value==="0"){
-    bend.innerText = "Select a rung to continue.";
+  if (objSelect.value<1 || objSelect.value > 48){
+    bend.innerText = "Enter a valid rung (1 - 48) to continue.";
   }
   else {
 	
