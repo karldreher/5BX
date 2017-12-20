@@ -1,5 +1,5 @@
 var ladder = [
- [0,"bend","situp","leglift","pushup","RunandJump"],
+[0,"bend","situp","leglift","pushup","RunandJump"],
 [1,2,3,4,2,105],
 [2,3,4,5,3,140],
 [3,4,6,6,3,170],
@@ -55,16 +55,19 @@ var objSelect = document.getElementById("select");
 var fragment = document.createDocumentFragment();
 
 ladder.forEach(function(indexnum){
-    var opt = document.createElement('option');
-    opt.innerHTML = indexnum[0];
-    opt.value = indexnum[0];
-    fragment.appendChild(opt);
+    if (indexnum[0]>0) {
+		var opt = document.createElement('option');
+		opt.innerHTML = indexnum[0];
+		opt.value = indexnum[0];
+		fragment.appendChild(opt);
+	};
 });
 
 objSelect.appendChild(fragment);
 
 function maindisplay(){
-  var rung=objSelect.value;
+  var rung = objSelect.value;
+  var start = document.getElementById("start");
   var bend = document.getElementById("bend");
   var situp = document.getElementById("situp");
   var leglift = document.getElementById("leglift");
@@ -73,9 +76,10 @@ function maindisplay(){
       
   if (objSelect.value==="0"){
     bend.innerText = "Select a rung to continue.";
+	start.innerText = "Select a rung to continue.";
   }
   else {
-	
+	start.innerText = "Bend";
     bend.innerText = "Bend: " + ladder[rung][1];
     situp.innerText = "Situp: " + ladder[rung][2];
     leglift.innerText = "Leg lift: " + ladder[rung][3];
