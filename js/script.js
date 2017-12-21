@@ -75,11 +75,11 @@ function maindisplay(){
   var RunandJump = document.getElementById("RunandJump");
       
   if (objSelect.value==="0"){
-    bend.innerText = "Select a rung to continue.";
+  bend.innerText = "Select a rung to continue.";
 	start.innerText = "Select a rung to continue.";
   }
   else {
-	start.innerText = "Bend";
+	start.innerText = "Enter a rung to continue.";
     bend.innerText = "Bend: " + ladder[rung][1];
     situp.innerText = "Situp: " + ladder[rung][2];
     leglift.innerText = "Leg lift: " + ladder[rung][3];
@@ -90,18 +90,3 @@ function maindisplay(){
   
   
 }
-
- $(function() {
-    $( "#accordion" ).accordion({
-      heightStyle: "auto"
-    });
-  });
-  $(function() {
-    $( "#accordion-resizer" ).resizable({
-      minHeight: 400,
-      minWidth: 200,
-      resize: function() {
-        $( "#accordion" ).accordion( "refresh" );
-      }
-    });
-  });

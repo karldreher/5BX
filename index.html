@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link type="text/css" rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/smoothness/jquery-ui.css"/>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
 <title>5BX</title>
 <link type="text/css" rel="stylesheet" href="css/style.css"/>
 <link rel="manifest" href="manifest.json">
@@ -12,32 +9,38 @@
 <body onload="maindisplay()">
 
 <div id="header" style="font-size: 500%;">5BX
-<select class="select" id="select" onchange="maindisplay()">
-	<option value="Rung">Rung</option>
-</select>
+
 </div>   
 <HR>
 
-<div id="accordion-resizer">
-<div class="wrapper" id="accordion">
-	<h3 id="start">Bend</h3>
+<div class="center">
+        <select class="select" id="select" onchange="maindisplay()">
+                <option value="Rung">Rung</option>
+        </select>
+</div>
+
+<div class="wrapper">
+
+    <div class="number" id="start"></div>
     <div class="number" id="bend"></div>
     
-    <h3>SitUp</h3>
     <div class="number" id="situp"></div>
      
-    <h3>Leg Lift</h3>
+
     <div class="number" id="leglift"></div>
     
-    <h3>Pushup</h3>
+
     <div class="number" id="pushup"></div>
    
-    <h3>Run and Jump</h3>
     <div class="number" id="RunandJump"></div>
-    
-</div> 
+
+
+</div>
+
 <div class="nav" id=left-arrow>&larr;</div>
 <div class="nav" id=right-arrow>&rarr;</div>
+
+
 
 <script type="text/javascript" src="js/script.js"></script>
 </body>
