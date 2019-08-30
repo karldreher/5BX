@@ -1,33 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
 <title>5BX</title>
 <link type="text/css" rel="stylesheet" href="css/style.css"/>
 <link rel="manifest" href="manifest.json">
 </head>
 
-<body onload="maindisplay()">
+<body>
 <div id="header" style="font-size: 175px;">5BX</div>   
 <HR>
 
-<div class="center">
-        <select class="select" id="select" onchange="maindisplay()">
-                <option value="Rung">Rung</option>
-        </select>
-</div>
 
-<div class="wrapper">
-    <div class="number" id="start"></div>
-    <div class="number" id="bend"></div>
-    <div class="number" id="situp"></div>
-    <div class="number" id="leglift"></div>
-    <div class="number" id="pushup"></div>  
-    <div class="number" id="RunandJump"></div>
-</div>
+<center>
+	
+	<div class="center">
+		<div class="nav" id=up-arrow>&uarr;</div>
+		
+		<select class="select" id="select" onchange="calculaterung()">
+				<option value="Rung">Select a rung</option>
+		</select>
+		
 
-<div class="nav" id=left-arrow>&larr;</div>
-<div class="nav" id=right-arrow>&rarr;</div>
+		<div class="wrapper" id="display">
+			<div class="title" id="title"></div>
+			<div class="number" id="number"></div>
+		</div>
 
+		<div class="nav" id="down-arrow">&darr;</div>
+		
+	</div>
+</center>
 <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

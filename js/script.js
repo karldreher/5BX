@@ -1,3 +1,12 @@
+class Excercise{
+  constructor (title, number){
+  this.title = title;
+  this.number = number;
+  }
+  
+  
+}
+
 var ladder = [
 [0,"bend","situp","leglift","pushup","RunandJump"],
 [1,2,3,4,2,105],
@@ -50,43 +59,31 @@ var ladder = [
 [48,80,69,96,41,575]
 ];
 
-var objSelect = document.getElementById("select");
 
+var objSelect = document.getElementById("select");
 var fragment = document.createDocumentFragment();
 
 ladder.forEach(function(indexnum){
     if (indexnum[0]>0) {
-		var opt = document.createElement('option');
-		opt.innerHTML = indexnum[0];
-		opt.value = indexnum[0];
-		fragment.appendChild(opt);
-	};
+    var opt = document.createElement('option');
+    opt.innerHTML = indexnum[0];
+    opt.value = indexnum[0];
+    fragment.appendChild(opt);
+  };
 });
 
 objSelect.appendChild(fragment);
 
-function maindisplay(){
+function calculaterung(){
   var rung = objSelect.value;
-  var start = document.getElementById("start");
-  var bend = document.getElementById("bend");
-  var situp = document.getElementById("situp");
-  var leglift = document.getElementById("leglift");
-  var pushup = document.getElementById("pushup");
-  var RunandJump = document.getElementById("RunandJump");
-      
-  if (objSelect.value==="0"){
-  bend.innerText = "Select a rung to continue.";
-	start.innerText = "Select a rung to continue.";
-  }
-  else {
-	start.innerText = "Enter a rung to continue.";
-    bend.innerText = "Bend: " + ladder[rung][1];
-    situp.innerText = "Situp: " + ladder[rung][2];
-    leglift.innerText = "Leg lift: " + ladder[rung][3];
-    pushup.innerText = "Push-up: " + ladder[rung][4];
-    RunandJump.innerText = "Run and Jump: " + (Math.floor(ladder[rung][5]/75)) + " sets of 75, " +  (ladder[rung][5] % 75) + " leftover";
-    
-  }
   
+  var Bend = new Excercise("Bend",ladder[rung]1))
   
+  var Situp = new Excercise("Situps",ladder[rung]2)
+  var Leglift = new Excercise("Leg Lifts",ladder[rung]3)
+  var Pushup = new Excercise("Leg Lifts",ladder[rung]4)
+  var RunandJump = new Excercise("Leg Lifts",ladder[rung]5)
+
 }
+  
+  

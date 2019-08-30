@@ -1,32 +1,36 @@
-#left-arrow{
-  float: left;
-  margin-left: 30%;
-}
-
-#right-arrow{
-  float: right;
-  margin-right: 30%;
-}
-
 .center{
   text-align: center;
 }
 
 .nav{
-  margin-top: 50%;
+  position: sticky;
+  position: -webkit-sticky; 
   font-size: 150px;
   font-weight: bolder;
   border: 2px solid black;
   cursor:pointer;
+  width:20%;
+  float: right;
 }
 
+#up-arrow{
+	top: 8px;
+	
+}
+#down-arrow{
+	position: static;
+	bottom: 8px;
+}
+
+
 .number{
-  font-size: 350%;
-  height: 15%;
+  font-size: 200%
+
 }
 
 .select{
+  float:left;
   margin: 20px;
-  font-size: 75px; 
+  font-size: 150px; 
 
 }
