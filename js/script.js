@@ -77,11 +77,11 @@ objSelect.appendChild(fragment);
 function calculaterung(){
   var rung = objSelect.value;
   
-  var Bend = new Excercise("Bend",ladder[rung]1))
-  var Situp = new Excercise("Situps",ladder[rung]2)
-  var Leglift = new Excercise("Leg Lifts",ladder[rung]3)
-  var Pushup = new Excercise("Leg Lifts",ladder[rung]4)
-  var RunandJump = new Excercise("Leg Lifts",ladder[rung]5)
+  var Bend = new Excercise("Bend",ladder[rung][1])
+  var Situp = new Excercise("Situps",ladder[rung][2])
+  var Leglift = new Excercise("Leg Lifts",ladder[rung][3])
+  var Pushup = new Excercise("Leg Lifts",ladder[rung][4])
+  var RunandJump = new Excercise("Leg Lifts",ladder[rung][5])
 
 }
   
