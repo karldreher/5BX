@@ -1,10 +1,12 @@
 ul {
   list-style-type: none;
+  width: 30%;
+  height: 100%;
+  font-size: x-large;
+  overflow: hidden;
   margin: 0;
   padding: 0;
-  width: 100%;
-  font-size: xx-large;
-  overflow: hidden;
+  position: fixed;
 
 }
 
@@ -17,10 +19,9 @@ ul li:nth-child(6){background-color:violet;}
 
 
 li {
-
-  float: left;
+  width: 100%;
   border: 2px black;
-
+  text-align: left;
 }
 
 
@@ -40,7 +41,8 @@ li a:active {
 }
 
 .center{
-  text-align: center;
+  text-align: right;
+  float: right;
 }
 
 .nav{
@@ -54,15 +56,12 @@ li a:active {
   float: right;
 }
 
-#up-arrow{
-	top: 8px;
-	
-}
-#down-arrow{
-	position: static;
-	bottom: 8px;
-}
 
+.center{
+  width: 70%;
+  margin: 0;
+
+}
 
 .number{
   font-size: 200%
@@ -70,9 +69,9 @@ li a:active {
 }
 
 .select{
-  float:left;
-  margin: 20px;
-  font-size: 150px; 
+  font-size: large; 
+  width: 100%;
+
 
 }
 

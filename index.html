@@ -4,42 +4,39 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
 <title>5BX</title>
+
 <link type="text/css" rel="stylesheet" href="css/style.css"/>
 <link rel="manifest" href="manifest.json">
 </head>
 
 <body>
-<div id="header" style="font-size: 175px;">5BX</div>   
+<div id="header" style="font-size: 175px;">5BX</div>
 <HR>
 
 <ul class="navbar">
 	<li><a href=#select>Select Rung</a></li>
-	<li><a href=#bend>Bend</a></li>
-	<li><a href=#situp>Situps</a></li>
-	<li><a href=#leglift>Leg Lifts</a></li>
-	<li><a href=#pushup>Pushups</a></li>
-	<li><a href=#runandjump>Run and Jump</a></li>
+	<li><a href="javascript:show_content(Bend)">Bend</a></li>
+	<li><a href="javascript:show_content(Situp)">Situps</a></li>
+	<li><a href="javascript:show_content(LegLift)">Leg Lifts</a></li>
+	<li><a href="javascript:show_content(Pushup)">Pushups</a></li>
+	<li><a href="javascript:show_content(RunandJump)">Run and Jump</a></li>
 </ul>
 
-<center>
+
 	
-	<div class="center">
-		<div class="nav" id=up-arrow>&uarr;</div>
-		
-		<select class="select" id="select" onchange="calculaterung()">
-				<option value="Rung">Select a rung</option>
-		</select>
-		
+<div class="center">
+	<select class="select" id="select" onchange="calculaterung()">
+		<option value="Rung">Select a rung</option>
+	</select>
 
-		<div class="wrapper" id="display">
-			<div class="title" id="title"></div>
-			<div class="number" id="number"></div>
-		</div>
+	
 
-		<div class="nav" id="down-arrow">&darr;</div>
-		
+	<div class="wrapper" id="display">
+		<div class="title" id="title"></div>
+		<div class="number" id="number"></div>
 	</div>
-</center>
+	
+</div>
 <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
