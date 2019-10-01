@@ -84,6 +84,8 @@ function calculaterung(){
   Pushup = new Excercise("Pushup",ladder[rung][4]);
   RunandJump = new Excercise("Run and Jump",ladder[rung][5]);
 
+  show_content(Bend)
+
 };
 
 function show_content(Excercise){
