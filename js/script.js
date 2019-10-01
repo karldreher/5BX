@@ -78,13 +78,17 @@ function calculaterung(){
   var rung = objSelect.value;
   console.log(rung);
 
-  var Bend = new Excercise("Bend",ladder[rung][1]);
-  var Situp = new Excercise("Situps",ladder[rung][2]);
-  var Leglift = new Excercise("Leg Lifts",ladder[rung][3]);
-  var Pushup = new Excercise("Pushup",ladder[rung][4]);
-  var RunandJump = new Excercise("Run and Jump",ladder[rung][5]);
+  Bend = new Excercise("Bend",ladder[rung][1]);
+  Situp = new Excercise("Situps",ladder[rung][2]);
+  LegLift = new Excercise("Leg Lifts",ladder[rung][3]);
+  Pushup = new Excercise("Pushup",ladder[rung][4]);
+  RunandJump = new Excercise("Run and Jump",ladder[rung][5]);
 
 };
 
+function show_content(Excercise){
+  document.getElementById('title').innerHTML = Excercise.title
+  document.getElementById('number').innerHTML= Excercise.number
 
+}
 
