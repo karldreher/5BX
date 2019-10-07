@@ -39,39 +39,46 @@ li a:active {
   color: whitesmoke;
 
 }
-
-.center{
-  text-align: center;
-  float: right;
+#container{
+  display: grid;
+  grid-template-columns: [navbar] 20% [content-area] 80%;
 }
 
+
 .nav{
+  grid-area: navbar;
   position: sticky;
   position: -webkit-sticky; 
   font-size: 150px;
   font-weight: bolder;
   border: 2px solid black;
   cursor:pointer;
-  width:20%;
-  float: right;
 }
 
 
-.center{
-  width: 70%;
+.content{
+  grid-area: content-area;
   margin: 0;
+  text-align: center;
+  float: right;
 
+}
+
+.title{
+  font-size: 500%;
 }
 
 .number{
-  font-size: 200%
-
+  font-size: 800%;
+  margin-bottom 50%;
 }
 
 .select{
   font-size: large; 
-  width: 100%;
-
+  width: 50%;
 
 }
 
+.wrapper {
+  margin-left: 20px;
+}
