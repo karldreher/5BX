@@ -1,5 +1,14 @@
+class Excercise{
+  constructor (title, number){
+  this.title = title;
+  this.number = number;
+  }
+  
+  
+}
+
 var ladder = [
- [0,"bend","situp","leglift","pushup","RunandJump"],
+[0,"bend","situp","leglift","pushup","RunandJump"],
 [1,2,3,4,2,105],
 [2,3,4,5,3,140],
 [3,4,6,6,3,170],
@@ -50,54 +59,38 @@ var ladder = [
 [48,80,69,96,41,575]
 ];
 
-var objSelect = document.getElementById("select");
 
+var objSelect = document.getElementById("select");
 var fragment = document.createDocumentFragment();
 
 ladder.forEach(function(indexnum){
+    if (indexnum[0]>0) {
     var opt = document.createElement('option');
     opt.innerHTML = indexnum[0];
     opt.value = indexnum[0];
     fragment.appendChild(opt);
+  };
 });
 
 objSelect.appendChild(fragment);
 
-function maindisplay(){
-  var rung=objSelect.value;
-  var bend = document.getElementById("bend");
-  var situp = document.getElementById("situp");
-  var leglift = document.getElementById("leglift");
-  var pushup = document.getElementById("pushup");
-  var RunandJump = document.getElementById("RunandJump");
-      
-  if (objSelect.value==="0"){
-    bend.innerText = "Select a rung to continue.";
-  }
-  else {
-	
-    bend.innerText = "Bend: " + ladder[rung][1];
-    situp.innerText = "Situp: " + ladder[rung][2];
-    leglift.innerText = "Leg lift: " + ladder[rung][3];
-    pushup.innerText = "Push-up: " + ladder[rung][4];
-    RunandJump.innerText = "Run and Jump: " + (Math.floor(ladder[rung][5]/75)) + " sets of 75, " +  (ladder[rung][5] % 75) + " leftover";
-    
-  }
-  
-  
+function calculaterung(){
+  var rung = objSelect.value;
+  console.log(rung);
+
+  Bend = new Excercise("Bend",ladder[rung][1]);
+  Situp = new Excercise("Situps",ladder[rung][2]);
+  LegLift = new Excercise("Leg Lifts",ladder[rung][3]);
+  Pushup = new Excercise("Pushup",ladder[rung][4]);
+  RunandJump = new Excercise("Run and Jump",ladder[rung][5]);
+
+  show_content(Bend)
+
+};
+
+function show_content(Excercise){
+  document.getElementById('title').innerHTML = Excercise.title
+  document.getElementById('number').innerHTML= Excercise.number
+
 }
 
- $(function() {
-    $( "#accordion" ).accordion({
-      heightStyle: "auto"
-    });
-  });
-  $(function() {
-    $( "#accordion-resizer" ).resizable({
-      minHeight: 400,
-      minWidth: 200,
-      resize: function() {
-        $( "#accordion" ).accordion( "refresh" );
-      }
-    });
-  });
