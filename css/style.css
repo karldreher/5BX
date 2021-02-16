@@ -1,31 +1,14 @@
-ul {
-  list-style-type: none;
-  width: 30%;
-  height: 100%;
-  font-size: x-large;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  position: fixed;
-
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr 0.5fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
 }
-
-ul li:nth-child(1){background-color:darkred;}
-ul li:nth-child(2){background-color:orange;}
-ul li:nth-child(3){background-color:yellow;}
-ul li:nth-child(4){background-color:lightgreen;}
-ul li:nth-child(5){background-color:lightskyblue;}
-ul li:nth-child(6){background-color:violet;}
-
-
 li {
   width: 100%;
   border: 2px black;
   text-align: left;
 }
-
-
-
 li a {
   display: block;
   color: black;
@@ -34,52 +17,56 @@ li a {
   text-decoration: none;
 }
 
-li a:active {
-  background-color:darkslategray;
-  color: whitesmoke;
-
-}
-#container{
-  display: grid;
-  grid-template-columns: [navbar] 20% [content-area] 80%;
+ul li:nth-child(1) {
+  background-color: darkred;
 }
 
-
-.nav{
-  grid-area: navbar;
-  position: sticky;
-  position: -webkit-sticky; 
-  font-size: 150px;
-  font-weight: bolder;
-  border: 2px solid black;
-  cursor:pointer;
+ul li:nth-child(2) {
+  background-color: orange;
 }
 
-
-.content{
-  grid-area: content-area;
-  margin: 0;
-  text-align: center;
-  float: right;
-  margin-left: 5%;
-
+ul li:nth-child(3) {
+  background-color: yellow;
 }
 
-.title{
-  font-size: 500%;
+ul li:nth-child(4) {
+  background-color: lightgreen;
 }
 
-.number{
-  font-size: 800%;
-  margin-bottom: 50%;
+ul li:nth-child(5) {
+  background-color: lightskyblue;
 }
 
-.select{
-  font-size: large; 
-  width: 50%;
-
+ul li:nth-child(6) {
+  background-color: violet;
 }
 
-.wrapper {
-  margin-left: 20px;
+.right-whitespace {
+  grid-area: 2 / 5 / 8 / 6;
+}
+
+.left-whitespace {
+  grid-area: 2 / 1 / 8 / 2;
+}
+
+.title-row {
+  grid-area: 1 / 1 / 2 / 6;
+  font-size: x-large;
+  border-bottom: 2px solid red;
+}
+
+.rung-select {
+  grid-area: 2 / 2 / 3 / 5;
+}
+
+.excercise-name {
+  grid-area: 3 / 2 / 4 / 5;
+}
+
+.excercise-number {
+  grid-area: 4 / 2 / 6 / 5;
+}
+
+.select-excercise {
+  grid-area: 7 / 1 / 8 / 6;
 }

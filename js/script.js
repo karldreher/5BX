@@ -60,7 +60,7 @@ var ladder = [
 ];
 
 
-var objSelect = document.getElementById("select");
+var objSelect = document.getElementById("rung-select");
 var fragment = document.createDocumentFragment();
 
 ladder.forEach(function(indexnum){
@@ -89,8 +89,8 @@ function calculaterung(){
 };
 
 function show_content(Excercise){
-  document.getElementById('title').innerHTML = Excercise.title
-  document.getElementById('number').innerHTML= Excercise.number
+  document.getElementById('excercise-name').innerHTML = Excercise.title
+  document.getElementById('excercise-number').innerHTML= Excercise.number
 
 }
 
