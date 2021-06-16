@@ -1,11 +1,11 @@
 <script>
     let rungs = [...Array(55).keys()];
     let selection;
-    let jsonData = [];
 
     async function getData(){
-        const data = await fetch("/rung");
+        const data = await fetch("/api");
         const jsonData = await data.json();
+
         if (data.ok) {
             console.log(jsonData)
 			return jsonData;
