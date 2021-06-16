@@ -30,10 +30,9 @@
     <p>awaiting data..</p>
 {:then result}
     {#each result as r}
-    <h2 id='display'>{r.name}</h2>
+    <h2 id='display'>{r.rung}</h2>
     {/each}
 {:catch error}
     <p style="color: red">{error.message}</p>
 {/await}
 
-<!-- working part <p>{JSON.stringify(json)}</p> -->
