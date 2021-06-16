@@ -1,3 +1,5 @@
+import json from './ladder.json'
+
 let LadderArray = [
     [0,"bend","situp","leglift","pushup","RunandJump"],
     [1,2,3,4,2,105],
@@ -50,9 +52,11 @@ let LadderArray = [
     [48,80,69,96,41,575]
     ]
 
-export function get({ params }){    
-    let result = LadderArray.filter(r => r[0]==params);
-    return result
+
+export function get(){    
+    //let result = LadderArray.filter(r => r[0]==params);
+    let result = json
+    return {body: result}
 }
     
 
