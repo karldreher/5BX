@@ -1,7 +1,5 @@
 <script>
-    let rungs = [...Array(55).keys()];
-    let selection;
-
+    import Rungs from '$lib/rungs.svelte'
     async function getData(){
         const data = await fetch("/api");
         const jsonData = await data.json();
@@ -20,11 +18,7 @@
 </script>
 
 
-<select bind:value={selection} id='rungSelector'>
-	{#each rungs as rung}
-	<option value={rung}>{rung}</option>
-	{/each}
-</select><p>this value updates! {selection}</p>
+<Rungs />
 
 {#await promise}
     <p>awaiting data..</p>
