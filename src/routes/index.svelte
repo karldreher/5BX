@@ -1,7 +1,9 @@
 <script>
     import Rungs from '$lib/rungs.svelte'
-    async function getData(){
-        const data = await fetch("/api");
+
+    async function getData(value){
+        const endpoint = "/rung/" + value
+        const data = await fetch(endpoint);
         const jsonData = await data.json();
 
         if (data.ok) {
@@ -12,8 +14,9 @@
 			throw new Error(data);
 		}
     }
-    
-    let promise = getData()
+    //testing only, needs to come from selection
+    let value = 3
+    let promise = getData(value)
 
 </script>
 
@@ -23,7 +26,7 @@
 {#await promise}
     <p>awaiting data..</p>
 {:then result}
-    {#each result as r}
+    {#each result.result as r}
     <h2 id='display'>{r.rung}</h2>
     {/each}
 {:catch error}
