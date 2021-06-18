@@ -1,6 +1,6 @@
 <script>
-    import Rungs from '$lib/rungs.svelte'
-
+    let rungs = [...Array(55).keys()];
+    let selection;
     async function getData(value){
         const endpoint = "/rung/" + value
         const data = await fetch(endpoint);
@@ -14,14 +14,16 @@
 			throw new Error(data);
 		}
     }
-    //testing only, needs to come from selection
-    let value = 3
-    let promise = getData(value)
+
+    $: promise = getData(selection)
 
 </script>
 
-
-<Rungs />
+<select bind:value={selection} id='rungSelector'>
+	{#each rungs as rung}
+	<option value={rung}>{rung}</option>
+	{/each}
+</select><p>this value updates! {selection}</p>
 
 {#await promise}
     <p>awaiting data..</p>
