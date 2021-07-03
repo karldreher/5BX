@@ -7,16 +7,16 @@ router.get('/:slug', function(req, res, next) {
 
   slug = req.params.slug;
   row = Cakebase.get(r => r.rung == slug)
-  result = row[0]
+  let {rung,bend,situp,leglift,pushup,runandjump } = row[0]
 
   res.render('rung', {
      title: 'Express', 
-     rung: row.rung,
-     bend: result.bend,
-     situp: result.situp,
-     leglift: result.leglift,
-     pushup: result.pushup,
-     runandjump: result.runandjump,
+     rung: rung,
+     bend: bend,
+     situp: situp,
+     leglift: leglift,
+     pushup: pushup,
+     runandjump: runandjump,
     });
 });
 
