@@ -1,13 +1,25 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  
-  h1 Rung: #{rung}
-  h2 Bend: #{bend} 
-  h2 Situp: #{situp}
-  h2 Leg Lift: #{leglift}
-  h2 Pushups: #{pushup}
-  h2 Run and Jump: #{runandjump}
+  div(class="columns is-half is-mobile is-half-desktop")
+    div(class="column")
+      div(class="card")
+        div(class="card-header") 
+          p(class="card-header-title is-size-3") Rung: #{rung}  
+        div(class="card-content is-size-4") 
+          div(class="columns is-2 is-mobile") 
+            div(class="column has-text-weight-medium") Bend: 
+            div(class="column") #{bend}
+          div(class="columns is-2 is-mobile")
+            div(class="column has-text-weight-medium") Situp: 
+            div(class="column") #{situp}
+          div(class="columns is-2 is-mobile")
+            div(class="column has-text-weight-medium") Leg Lift: 
+            div(class="column") #{leglift}
+          div(class="columns is-2 is-mobile")
+            div(class="column has-text-weight-medium") Pushups: 
+            div(class="column") #{pushup}
+          div(class="columns is-2 is-mobile")
+            div(class="column has-text-weight-medium") Run and Jump: 
+            div(class="column") #{runandjump}
 
