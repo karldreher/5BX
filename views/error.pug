@@ -1,6 +1,9 @@
 extends layout
 
 block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+  div(class="content has-text-danger is-size-2") Error! 
+  div(class="content has-text-danger")=message
+  h1 How did you even get here? 
+  if error.stack
+    h2 If you're a developer, the message below may help.
+    pre #{error.stack}

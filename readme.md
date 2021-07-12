@@ -7,6 +7,7 @@ This application is built with Express and Bulma.
 
 ## Building the application
 ```bash
+npm install
 npm run css
 npm start
 ```
