@@ -1,5 +1,14 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div(class="columns is-half is-mobile is-half-desktop")
+  div(class="column")
+    div(class="card")
+      div(class="card-header") 
+        p(class="card-header-title is-size-3") Welcome
+      div(class="card-content is-size-4") 
+        div(class="columns is-1 is-mobile") 
+          div(class="column has-text-weight-medium") Welcome to 5bx.  To get started, select a rung below.
+      div(class="card-footer")
+        div(class="card-footer-item")
+          include dropdown.pug

@@ -1,0 +1,9 @@
+div(class="dropdown")
+    div(class="dropdown-trigger")
+        button(class="button" aria-haspopup="true" aria-controls="dropdown-menu")
+            span Select a rung
+    div(class="dropdown-menu" id="dropdown-menu" role="menu")
+        div(class="dropdown-content")
+        //this needs to be set static, to the max value of db/ladder.json
+    each val in [1,2,3,4,5,6,7,8,9,10]
+        a(href="/rung/" class="dropdown-item")= val 
