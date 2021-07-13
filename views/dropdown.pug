@@ -6,8 +6,7 @@ div(class="dropdown")
         div(class="dropdown-content")
         //Array length must match max rung key in db/ladder.json
         each value in [...Array(48).keys()]
-            if value > 0
-                a(href="/rung/"+value  class="dropdown-item")= value
+            a(href="/rung/"+value  class="dropdown-item")= value
 
 script. 
     var dropdown = document.querySelector('.dropdown');
