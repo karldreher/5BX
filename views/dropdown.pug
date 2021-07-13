@@ -4,8 +4,10 @@ div(class="dropdown")
             span Select a rung
     div(class="dropdown-menu" id="dropdown-menu" role="menu")
         div(class="dropdown-content")
-        each value in [1,2,3,4,5,6,7,8,9,10]
-            a(href="/rung/"+value  class="dropdown-item")= value
+        //Array length must match max rung key in db/ladder.json
+        each value in [...Array(48).keys()]
+            if value > 0
+                a(href="/rung/"+value  class="dropdown-item")= value
 
 script. 
     var dropdown = document.querySelector('.dropdown');
