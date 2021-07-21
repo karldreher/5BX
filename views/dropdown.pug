@@ -1,6 +1,6 @@
 div(class="select")
     select(class="ui-select" onchange="navigate()")
-        option Select Rung
+        option(class="is-hidden") Select Rung
         each value in [...Array(48).keys()]
             if value > 0
                 option= value
@@ -9,7 +9,5 @@ div(class="select")
     script. 
       function navigate(){
           value = document.querySelector('.ui-select');
-          if (value.value != "Select Rung"){
-            window.location.replace("/rung/"+value.value)
-          }
+          window.location.replace("/rung/"+value.value)
       }
