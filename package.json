@@ -1,0 +1,20 @@
+{
+  "name": "5bx",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "css": "node-sass --omit-source-map-url sass/style.scss public/stylesheets/style.css"
+  },
+  "dependencies": {
+    "bulma": "^0.9.3",
+    "cakebase": "^1.1.0",
+    "cookie-parser": "~1.4.5",
+    "debug": "~4.3.2",
+    "express": "~4.17.1",
+    "http-errors": "~1.8.0",
+    "morgan": "~1.10.0",
+    "node-sass": "^6.0.1",
+    "pug": "^3.0.2"
+  }
+}
