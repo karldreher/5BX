@@ -8,7 +8,6 @@
   },
   "dependencies": {
     "bulma": "^0.9.3",
-    "cakebase": "^1.1.0",
     "cookie-parser": "~1.4.5",
     "debug": "~4.3.2",
     "express": "~4.17.1",

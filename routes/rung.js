@@ -1,12 +1,12 @@
 var express = require('express');
 var router = express.Router();
-const Cakebase = require('cakebase')("./db/ladder.json");
+const jsonData = require("../db/ladder.json")
 
 /* GET users listing. */
 router.get('/:slug', function (req, res, next) {
 
   slug = req.params.slug;
-  row = Cakebase.get(r => r.rung == slug)
+  row = jsonData.filter(({rung}) => rung == slug)
 
   //currently, will catch number out of range and non-integer input
   if (row.length == 0) { throw new Error("Invalid input") }
