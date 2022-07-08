@@ -1,0 +1,48 @@
+name: Docker Build
+
+on:
+  push:
+    branches:
+      - master
+      - development
+  # Allows running this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  buildx:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set up Docker Buildx
+        id: buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Inspect builder
+        run: |
+          echo "Name:      ${{ steps.buildx.outputs.name }}"
+          echo "Endpoint:  ${{ steps.buildx.outputs.endpoint }}"
+          echo "Status:    ${{ steps.buildx.outputs.status }}"
+          echo "Flags:     ${{ steps.buildx.outputs.flags }}"
+          echo "Platforms: ${{ steps.buildx.outputs.platforms }}"
+
+      - name: Login to DockerHub
+        uses: docker/login-action@v2
+        with:
+          username: karldreher
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and push docker image (development)
+        uses: docker/build-push-action@v3
+        if: github.ref_name == 'develop'
+        with:
+          push: true
+          tags: karldreher/5bx:develop
+
+      - name: Build and push docker image (latest)
+        uses: docker/build-push-action@v3
+        if: github.ref_name == 'master'
+        with:
+          push: true
+          tags: karldreher/5bx:latest
